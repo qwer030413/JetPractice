@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.KeyListener; 
+import java.awt.event.KeyListener;
+import java.io.InputStream; 
 //player
 public class seconds extends JPanel implements ActionListener, KeyListener{
     double x1 = 0;
@@ -18,7 +19,10 @@ public class seconds extends JPanel implements ActionListener, KeyListener{
     {
         this.setPreferredSize(new Dimension(600,600));
         this.setBackground(Color.BLACK);  
-        image1 = new ImageIcon("plane.jpg").getImage();
+        //for eclipse
+//        image1 = new ImageIcon(this.getClass().getResource("/plane.jpg")).getImage();
+        //for vscode
+//        image1 = new ImageIcon("plane.jpg").getImage();								
         // bullet = new ImageIcon("plane2.jpg").getImage();
         timer = new Timer(1, this);
         timer.start();
